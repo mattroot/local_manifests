@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<manifest>
+
+    <!-- GZOSP manifest for Redmi Note 4 Qualcomm -->
+    <project path="device/xiaomi/mido" name="mattroot/android_device_xiaomi_mido" revision="gzosp-8.1" remote="github" />
+    <project path="kernel/xiaomi/msm8953" name="KudProject/kernel_xiaomi_msm8953" revision="oreo-mr1" remote="github" />
+    <project path="device/xiaomi/msm8953-common" name="LineageOS/android_device_xiaomi_msm8953-common" revision="lineage-15.1" remote="github" />
+    
+</manifest>
