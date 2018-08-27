@@ -3,8 +3,37 @@
 <manifest>
 
     <!-- GZOSP manifest for Redmi Note 4 Qualcomm -->
-    <project path="device/xiaomi/mido" name="mattroot/android_device_xiaomi_mido" revision="gzosp-8.1" remote="github" />
-    <project path="kernel/xiaomi/msm8953" name="KudProject/kernel_xiaomi_msm8953" revision="oreo-mr1" remote="github" />
-    <project path="device/xiaomi/msm8953-common" name="LineageOS/android_device_xiaomi_msm8953-common" revision="lineage-15.1" remote="github" />
+    <!-- 2018 PornAOSP Project. Free to use for everyone. I guess. -->
+    
+    <!-- Use OmniROM trees -->
+    <project path="device/xiaomi/mido" name="mattroot/android_device_xiaomi_mido-1" revision="gzosp-8.1" remote="github" />
+    <project path="kernel/xiaomi/msm8953" name="omnirom/android_kernel_xiaomi_msm8953" revision="android-8.1" remote="github" />
+    
+    <!-- Snapdragon camera, because why not -->
+    <project path="packages/apps/SnapdragonCamera" name="omnirom/android_packages_apps_SnapdragonCamera" revision="android-7.1" remote="github" />
+    
+    <!-- replace GZOSP packages with OmniROM ones to provide working system which doesn't suck -->
+    
+    <remove-project name="packages/apps/FMRadio" />
+    <project path="packages/apps/FMRadio" name="omnirom/android_packages_apps_FMRadio" revision="android-8.0" remote="github" />
+    
+    <remove-project name="device/qcom/sepolicy" />
+    <project path="device/qcom/sepolicy" name="omnirom/android_device_qcom_caf-sepolicy" revision="android-8.1" remote="github" />
+    
+    <remove-project name="vendor/qcom/opensource/dataservices" />
+    <project path="vendor/qcom/opensource/dataservices" name="omnirom/vendor_qcom_opensource_dataservices" revision="android-8.1" remote="github" />
+    
+    <project path="external/ant-wireless/antradio-library" name="omnirom/android_external_ant-wireless_antradio-library" revision="android-8.1" remote="github" />    
+    <project path="external/ant-wireless/ant_service" name="omnirom/android_external_ant-wireless_ant_service" revision="android-8.1" remote="github" />
+    <project path="external/ant-wireless/ant_native" name="omnirom/android_external_ant-wireless_ant_native" revision="android-8.1" remote="github" />
+    <project path="hardware/qcom/audio-caf-msm8996" name="omnirom/android_hardware_qcom_audio-caf-msm8996" revision="android-8.1" remote="github" />
+    <project path="hardware/qcom/display-caf-msm8996" name="omnirom/android_hardware_qcom_display-caf-msm8996" revision="android-8.1" remote="github" />
+    <project path="hardware/qcom/media-caf-msm8996" name="omnirom/android_hardware_qcom_media-caf-msm8996" revision="android-8.1" remote="github" />
+    
+    <remove-project name="vendor/qcom/opensource/interfaces" />
+    <project path="vendor/qcom/opensource/interfaces" name="omnirom/android_vendor_qcom_opensource_interfaces" revision="android-8.1" remote="github" />
+    
+    <remove-project name="hardware/qcom/fm" />
+    <project path="hardware/qcom/fm" name="omnirom/android_hardware_qcom_fm" revision="android-8.1" remote="github" />
     
 </manifest>
